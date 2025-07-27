@@ -164,6 +164,7 @@ public:
         };
 
         static auto a = plugin::pattern::Get("64 A1 ? ? ? ? 83 EC 1C 8B 00 56 8B 48 08", 0);
+                                   //1.0.8.0: 64 A1 ? ? ? ? 8B 08 8B 49 08 8B 11 8B 42 08 83 EC 1C
         plugin::patch::RedirectJump(a, Dummy);
 
         plugin::Events::menuProcessEvent += []() {
